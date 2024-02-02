@@ -9,5 +9,46 @@ send or web other serviror.
 For ENV had better to make it in the root of our project mean where the my packed.json are 
 present. github meant mean file.
 To create EVN file : we strat with . (.) is most important to make it and other in small ex
-
 .env
+
+IF YOU want to share this file with some you can make new file name shuold .env.sample
+now you have to .evn to go in github so you can project it by push in gitIgnore.
+
+update Enviroment file Problem:
+
+when every we update in .evn file most of the time we should restart or project if 
+you face any issue like npm run dev etc.
+
+To Access .env data:
+it the different concept every libuary take it own set of rules we will have to 
+check in Documentation;
+some here:
+for React we make veribale:
+REACT_APP_(YPUR_EVRIABLE _NAME)=your_value TO Acces: process.env.REACT_APP_(YPUR_EVRIABLE _NAME)
+
+for Vite we make veribale:
+VITE_(YPUR_EVRIABLE _NAME)=your_value TO Acces: import.meta.env.VITE_(YPUR_EVRIABLE _NAME)
+
+for Nextjs we make veribale:
+NEXT_PUBLIC_(YPUR_EVRIABLE _NAME)=your_value TO Acces: process.env.NEXT_PUBLIC_(YPUR_EVRIABLE _NAME)
+
+for calling env veriable:
+we can make seperate js file and call all env veriable
+
+------------------------------------end-----------------------------------------
+Appwrite:
+it the platform where you can use backend as serives it provide interfaces to 
+create your own backend api for your website. it has more features, like database authantication
+update downloard data and login logon with google etc.
+
+vendor lock-in problem:
+The vendor lock-in problem in cloud computing occurs when clients become reliant 
+(i.e., locked-in) on a single cloud provider's technological implementation and 
+are unable to switch vendors in the future without incurring significant fees, 
+legal restrictions, or technical incompatibilities. 
+
+it is is good service when we need change our backend as serive our app should work 
+mostly its isa future savefie methad in we make our service, it does not care about 
+backend as service it may be firebase Appwrite stapi our custom back etc.
+
+
