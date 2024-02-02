@@ -1,0 +1,13 @@
+ENV(Enviroment veriable):
+
+it used to save important information example password user id email because react is an
+client side libuary and all code code translate in browser that can be accesseble by every
+one so some information is very import to protect that is why we used ENV this information
+can shere with trustful people or platform like aws it in market many of because when we 
+send or web other serviror.
+
+For ENV had better to make it in the root of our project mean where the my packed.json are 
+present. github meant mean file.
+To create EVN file : we strat with . (.) is most important to make it and other in small ex
+
+.env
