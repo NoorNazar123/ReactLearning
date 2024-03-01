@@ -5,11 +5,11 @@ export class AuthService{
    client = new Client();
    account;
 
-   constructor(){
+   constructor(){ 
       this.client
           .setEndpoint(config.appwriteUrl)
           .setProject(config.appwriteProjectId)
-      this.account = Account(this.client)
+      this.account = new Account(this.client)
    }
    // it will always same above you can change what every may be firebase custom etc.
    //in future if we need to make any website with appwrite so we can used this code.  
@@ -19,7 +19,7 @@ export class AuthService{
         if(userAccount){
          //   return userAccount
          //another if user account created so it will auta sign in
-         await this.login({email,password});
+         return this.login({email,password});
 
         }else {
            return userAccount 
@@ -31,7 +31,7 @@ export class AuthService{
    // we can use now more method we need.
    async login({email,password}){
       try {
-         await await this.account.createEmailSession(email,password) // this method coming from appwrite docs
+         return await this.account.createEmailSession(email,password) // this method coming from appwrite docs
       } catch (error) {
          throw error;
       }
@@ -39,7 +39,7 @@ export class AuthService{
 
    async getCurrentUser(){
       try {
-         await this.account.get()
+         return await this.account.get();
       } catch (error) {
          console.log(`Appwrite Error :: getCurrentUser:${error}` );
       }
